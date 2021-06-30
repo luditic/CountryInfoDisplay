@@ -2,16 +2,22 @@ def openfile():
   f = open('countries.csv')
   return f
 
-def desplayinfo_1():
+def displayinfo_1():
   global infofile 
   lines = infofile.readlines()
-  print(lines)
+  #print(lines)
+  for line in lines:
+    print(line)
 
-def displayinfo():
+
+
+
+def regeions():
   global infofile
-  lines = infofile.readlines
+  lines = infofile.readlines()
   for i in range(0,len(lines),7):
-    print(1,lines[i])
+    list_line = lines[i].split(',')
+    print(list_line[0])
 
 infofile = openfile()
-displayinfo()
+displayinfo_1()
